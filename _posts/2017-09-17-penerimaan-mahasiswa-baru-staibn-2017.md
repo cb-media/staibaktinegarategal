@@ -11,9 +11,9 @@ date: 2017-09-17
 # meta description untuk posting
 meta: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, qui!
 # uri gambar kecil panjang x lebar harus sama alias persegi!
-thumb: images/news-1.png
+thumb: /images/news-1.png
 # tumbnail primary
-thumb-primary: images/slide-1.png
+thumb-primary: /images/slide-1.png
 # URL Friendly
 permalink: /:categories/:year/:title/
 ---
