@@ -22,6 +22,6 @@
 {% for ct in cats %}
 {% assign category = site.categories | where: 'slug', ct | first %}
 {% if category %}
-	<a href="{{ category.url }}" class="{{ category.class-name }}">{{ category.name }}</a>
+	<a href="{{ category.url | prepend: site.baseurl }}" class="{{ category.class-name }}">{{ category.name }}</a>
 {% endif %}
 {% endfor %}
