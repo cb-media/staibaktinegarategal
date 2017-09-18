@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import "bootstrap_scss/bootstrap";
+@import "partials/variables";
+
+$color-primary: #007bff;
+$d-small-none: none;
+$font-logo-small: 'Lato', sans-serif;
+$body-bg: #f4f4f4;
+
+body{
+	background-color: $body-bg;
+}
+
+.navbar {
+	background: transparent !important;
+}
+
+.navbar-scroll{
+	background: rgba(52, 58, 64, 0.89) !important;
+	box-shadow: 0px 0px 3px rgba(#000, 0.85);
+}
+
+.navbar-brand{
+	img{
+		width: 80px;
+		height: 30px;
+	}
+}
+
+.btn-outline-light{
+	color: #fff;
+	&:hover{
+		color: #007bff !important;
+		cursor: pointer;
+	}
+}

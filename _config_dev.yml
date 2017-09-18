@@ -1,0 +1,42 @@
+# ===============================================
+#  Ubah value logo untuk mengganti logo STAIBN
+#  Jangan menggunakan (../) !!!
+#  
+#  Root direktori akan ditentukan ketika diambil
+#  dalam 'double curyly brackets'
+#  
+#       {{ logo | site.baseurl }}
+#  
+#  logo adalah variable yang sudah di assign
+#  ==> buka _includes/header.html -> LINE : 6-7 
+# ===============================================
+logo: /images/logo.png
+# Boolean
+navigation: true
+welcome: false
+# Site Settings
+title: staibaktinegarategal
+email: staibntegal87@gmail.com
+version: v1.0.2
+log_date: 2017-09-08 23:56:01
+author: Imam Ali Mustofa - CB Media Group Software & Application Developer
+description: >
+  Portal Akademik Sekolah Tinggi Agama Islam Bakti Negara (STAIBN) Tegal 
+baseurl: "" # Sesuaikan dengan root / nama folder
+url: "http://127.0.0.1:4000" # Sesuaikan dengan nama url website
+twitter_username: yourtwitter
+github_username:  yourgithub
+
+# Collection Categories
+collections:
+  categories:
+    output: true
+  schedules:
+    output: true
+
+# Build Settings
+sass:
+  sass_dir: _sass
+include: ['_pages']
+kramdown:
+  input: GFM

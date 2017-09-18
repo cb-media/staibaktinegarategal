@@ -1,0 +1,49 @@
+---
+layout: page
+title: Schedules
+permalink: /schedules/
+---
+
+<div class="d-flex align-items-center bg-dark text-white flex-column" style="width: 100%;height: 250px;padding-top: 90px;">
+	
+	<h1 class="mx-auto"><i class="fa fa-calendar"></i> {{ page.title }}</h1>
+
+</div>
+
+
+<div class="container p-5">
+
+	<ul class="list-inline mb-3">
+		<li class="list-inline-item">Color Means: </li>
+		<li class="list-inline-item"><span class="badge badge-primary">Now Session</span></li>
+		<li class="list-inline-item"><span class="badge badge-dark">Expired</span></li>
+		<li class="list-inline-item"><span class="badge badge-success">Comming Soon</span></li>
+		<li class="list-inline-item"><span class="badge badge-warning">News</span></li>
+	</ul>
+
+	<div class="row">
+
+		{% assign sorted = site.schedules | sort: 'date' | reverse %}
+		{% for s in sorted %}
+		<div class="col-sm-6">
+			<div class="card {{ s.status-class }} mb-3">
+				<div class="card-header clearfix">
+					<span class="float-left h5"><sup><i class="fa fa-thumb-tack"></i></sup> {{ s.title }}</span>
+					<span class="float-right"><i class="fa fa-calendar"></i></span>
+				</div>
+				<div class="card-body">
+					<h4 class="card-title small"><i class="fa fa-clock-o"></i> Datetime: {{ s.date | date: "%d, %B - %Y Hours : %H:%M" }}</h4>
+					<p class="card-text font-italic text-truncate">
+						{{ s.note }}
+					</p>
+					<a href="#" class="btn btn-outline-light">
+						<i class="fa fa-external-link"></i> Details Event
+					</a>
+				</div>
+			</div>
+		</div>
+
+		{% endfor %}
+	</div>
+
+</div>

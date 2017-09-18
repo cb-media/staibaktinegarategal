@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<img src="{{ page.thumb-primary }}" alt="{{ page.title }}" class="img-fluid mb-3">
+
+<div class="container">
+
+	<h2 class="text-center">{{ page.title }}</h2>
+	<p class="text-center">
+		<small>
+			<i class="fa fa-calendar"></i> {{ page.date | date: "%b %-d, %Y" }}
+			{% if page.author %} | <i class="fa fa-user"></i> Author : {{ page.author }} {% endif %}
+			| Category: <span class="badge badge-primary">{{ page.categories }}</span>
+			| <i class="fa fa-clock-o"></i> <span class="reading-time" title="Reading Time">
+			  {% assign words = content | number_of_words %}
+			  {% if words < 360 %}
+			    1 min
+			  {% else %}
+			    {{ words | divided_by:180 }} mins
+			  {% endif %}
+			</span>
+		</small>
+	</p>
+
+	{{ content }}
+
+	<div class="fb-comments" data-href="{{ page.url | prepend: site.url }}" data-width="100%" data-numposts="10"></div>
+
+</div>

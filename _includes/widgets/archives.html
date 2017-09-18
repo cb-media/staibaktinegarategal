@@ -1,0 +1,22 @@
+<div id="archives" data-children=".item" class="mb-5">
+	<div class="item">
+		{% for post in site.posts %}
+		{% assign currentDate = post.date | date: "%Y" %}
+		{% if currentDate != myDate %}
+		{% unless forloop.first %}</ul>{% endunless %}
+		<a data-toggle="collapse" data-parent="#archives" href="#{{ currentDate }}" aria-expanded="true" aria-controls="{{ currentDate }}"><h5>{{ currentDate }}</h5></a>
+		<div id="{{ currentDate }}" class="collapse show" role="tabpanel">
+			<p class="mb-3">
+				<ul class="list-unstyled">
+					{% assign myDate = currentDate %}
+					{% endif %}
+					<li>
+						<small class="text-muted"><i class="fa fa-calendar"></i>  {{ post.date | date_to_string }}</small> <br> 
+						<a href="{{ post.url }}">{{ post.title }}</a>
+					</li>
+				</ul>
+			</p>
+			{% endfor %}
+		</div>
+	</div>
+</div>

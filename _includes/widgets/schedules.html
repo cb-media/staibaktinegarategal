@@ -1,0 +1,26 @@
+<small>Shcedule Colours</small>
+<ul class="list-inline mb-3">
+	<li class="list-inline-item"><span class="badge badge-primary">Now Session</span></li>
+	<li class="list-inline-item"><span class="badge badge-dark">Expired</span></li>
+	<li class="list-inline-item"><span class="badge badge-success">Comming Soon</span></li>
+	<li class="list-inline-item"><span class="badge badge-warning">News</span></li>
+</ul>
+
+<div class="row">
+	
+	{% assign sorted = site.schedules | sort: 'date' | reverse %}
+	{% for s in sorted %}
+
+	<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+		<div class="card {{ s.status-class }} mb-3" style="max-width: 20rem;">
+			<div class="card-header"><i class="fa fa-calendar"></i> {{ s.title }}</div>
+			<div class="card-body">
+				<h4 class="card-title small"><i class="fa fa-clock-o"></i>Datetime: {{ s.date | date: "%d, %B - %Y Hours : %H:%M" }}</h4>
+				<p class="card-text">{{ s.note }}</p>
+			</div>
+		</div>
+	</div>
+
+	{% endfor %}
+
+</div>

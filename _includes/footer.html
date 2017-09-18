@@ -1,0 +1,46 @@
+<footer class="main-footer text-white p-5 bg-dark container-fluid">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+				<h4><i class="fa fa-link"></i> Other Options</h4>
+				<hr class="bg-light">
+				<ul class="list-unstyled">
+					<li><a href="#">Blog STAIBN Tegal</a></li>
+					<li><a href="#">Jadwal Kegiatan</a></li>
+					<li><a href="#">Informasi Akademik</a></li>
+					<li><a href="#">Jurnal Umum</a></li>
+					<li><a href="#">Arsip Berita</a></li>
+				</ul>
+			</div>
+			<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+				<h4><i class="fa fa-map"></i> STAIBN Address</h4>
+				<hr class="bg-light">
+				<address><i>
+					Alamat: No. 09, Jl. Jeruk, Procot, Slawi, Tegal, Jawa Tengah 52411 <br>
+					Telepon: (0283) 491277 <br>
+					Provinsi: Jawa Tengah <br>
+					Email : <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+				</i></address>
+			</div>
+			<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+				<h4><i class="fa fa-map"></i> Email Subscribe</h4>
+				<hr class="bg-light">
+				<form>
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" placeholder="your@email.com" class="form-control">
+					</div>
+					<button class="btn btn-outline-light btn-block">Subscribe</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Scripts -->
+<script src="{{ '/js/jquery.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/popper.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/bootstrap.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/main.js' | prepend: site.baseurl }}"></script>
+</body>
+</html>

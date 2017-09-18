@@ -1,0 +1,38 @@
+#main-section{
+	font-family: $font-logo-small;
+	height: 600px;
+	.flex-item{
+		margin-top: 230px;
+		color: #222333;
+	}
+}
+
+/* Slider */
+.carousel {
+	margin-top: 0px;
+}
+
+marquee{
+	padding: 10px 5px;
+}
+
+/* Footer */
+.main-footer{
+	a{
+		color: $light;
+		&:hover{
+			color: $light;
+			text-decoration: none;
+		}
+	}
+}
+
+/* Blog Page */
+.blog-header{
+	width: 100%;
+	max-height: 350px;
+	overflow: hidden;
+	img{
+		margin-top: -50px;
+	}
+}

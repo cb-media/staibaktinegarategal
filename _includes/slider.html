@@ -1,0 +1,31 @@
+<!-- Slider -->
+<div id="slideCarousel" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+		<li data-target="#slideCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#slideCarousel" data-slide-to="1"></li>
+		<li data-target="#slideCarousel" data-slide-to="2"></li>
+	</ol>
+	
+	<div class="carousel-inner">
+		{% for slide in site.data.slider %}
+			
+		<div class="carousel-item {% if slide.active %}active{% endif %}">
+			<img class="d-block w-100" src="{{ slide.image | site.baseurl }}" alt="{{ slide.title }}">
+			<div class="carousel-caption d-none d-md-block">
+				<h3>{{ slide.title }}</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, deserunt minima eaque excepturi reiciendis ipsum assumenda cumque, aliquid laudantium, repellendus et repellat natus deleniti tenetur vero magni mollitia quam asperiores.</p>
+			</div>
+		</div>
+
+		{% endfor %}
+	</div>
+
+	<a class="carousel-control-prev" href="#slideCarousel" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#slideCarousel" role="button" data-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+</div>
