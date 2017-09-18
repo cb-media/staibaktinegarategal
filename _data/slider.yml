@@ -17,15 +17,15 @@
 
 - title: Wisuda Akhir Tahun STAIBN Tegal
   paragraph: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, deserunt minima eaque excepturi reiciendis ipsum assumenda cumque, aliquid laudantium, repellendus et repellat natus deleniti tenetur vero magni mollitia quam asperiores.
-  image: /images/slide-1.png
+  image: images/slide-1.png
   active: true
 
 - title: Dedikasi Penuh dalam Pembelajran
   paragraph: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, deserunt minima eaque excepturi reiciendis ipsum assumenda cumque, aliquid laudantium, repellendus et repellat natus deleniti tenetur vero magni mollitia quam asperiores.
-  image: /images/slide-2.png
+  image: images/slide-2.png
   active: false
 
 - title: Arsip Tersimpan Rapih
   paragraph: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, deserunt minima eaque excepturi reiciendis ipsum assumenda cumque, aliquid laudantium, repellendus et repellat natus deleniti tenetur vero magni mollitia quam asperiores.
-  image: /images/slide-3.png
+  image: images/slide-3.png
   active: false

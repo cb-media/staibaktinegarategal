@@ -10,7 +10,7 @@
 		{% for slide in site.data.slider %}
 			
 		<div class="carousel-item {% if slide.active %}active{% endif %}">
-			<img class="d-block w-100" src="{{ slide.image | site.baseurl }}" alt="{{ slide.title }}">
+			<img class="d-block w-100" src="{{ slide.image }}" alt="{{ slide.title }}">
 			<div class="carousel-caption d-none d-md-block">
 				<h3>{{ slide.title }}</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, deserunt minima eaque excepturi reiciendis ipsum assumenda cumque, aliquid laudantium, repellendus et repellat natus deleniti tenetur vero magni mollitia quam asperiores.</p>
