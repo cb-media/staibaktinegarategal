@@ -2,7 +2,7 @@
 	{% for post in site.posts | limit:4 %}
 	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
 		<div class="card mb-4">
-			<img class="card-img-top" src="{{ post.thumb-primary | prepend: site.baseurl }}" alt="{{ post.title }}">
+			<img class="card-img-top" src="{{ post.thumb-primary | prepend: site.url }}" alt="{{ post.title }}">
 			<div class="card-body">
 				<p class="card-text">
 					<h5>{{ post.title }}</h5>
@@ -12,13 +12,13 @@
 						Category: {% for ct in post.categories %}
 						{% assign category = site.categories | where: 'slug', ct | first %}
 						{% if category %}
-							<a href="{{ category.url | prepend: site.baseurl }}" class="{{ category.class-name }}">{{ category.name }}</a>
+							<a href="{{ category.url | prepend: site.url }}" class="{{ category.class-name }}">{{ category.name }}</a>
 						{% endif %}
 						{% endfor %}
 					</small>
 					<p>{{ post.content | | truncate: 100 }}</p>
 				</p>
-				<a href="{{ post.url | prepend: site.baseurl }}" class="card-link"><i class="fa fa-link"></i> Baca Selengkapnya</a>
+				<a href="{{ post.url | prepend: site.url }}" class="card-link"><i class="fa fa-link"></i> Baca Selengkapnya</a>
 			</div>
 		</div>
 	</div>
