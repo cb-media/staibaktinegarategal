@@ -21,14 +21,14 @@ layout: default
 			<div class="card bg-light mb-3">
 				<div class="card-body">
 					<h5 class="mb-0 card-title">
-						<i class="fa fa-link"></i> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+						<i class="fa fa-link"></i> <a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
 					</h5>
 					<small class="card-subtitle mb-2 text-muted">
 						<i class="fa fa-calendar"></i> {{ post.date | date: "%B %-d, %Y" }}
 						{% for ct in post.categories %}
 						{% assign category = site.categories | where: 'slug', ct | first %}
 						{% if category %}
-							<a href="{{ category.url | prepend: site.baseurl }}" class="{{ category.class-name }}">
+							<a href="{{ category.url | prepend: site.url }}" class="{{ category.class-name }}">
 								<i class="fa fa-thumb-tack"></i>  {{ category.name }}
 							</a>
 						{% endif %}
@@ -53,12 +53,12 @@ layout: default
 			{% endif %}
 			<li>
 				<small class="text-muted"><i class="fa fa-calendar"></i>  {{ post.date | date_to_string }}</small> - 
-				<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+				<a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
 			</li>
 
 			{% endfor %}
 		</div>
 	</div>
 	<hr class="bg-secondary">
-	<p>subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+	<p>subscribe <a href="{{ "/feed.xml" | prepend: site.url }}">via RSS</a></p>
 </section>

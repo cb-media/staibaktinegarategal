@@ -2,10 +2,10 @@
 
 <nav class="navbar navbar-no-scroll navbar-expand-lg navbar-dark bg-dark fixed-top">
 	<div class="container">
-		<a class="navbar-brand" href="{{ site.baseurl }}/">
+		<a class="navbar-brand" href="{{ site.url }}/">
 			<!-- Assign Variable logo -->
 			{% assign logo = site.logo %} 
-			<img src="{{ logo | prepend: site.baseurl }}" alt="Logo" class="d-small-none">
+			<img src="{{ logo | prepend: site.url }}" alt="Logo" class="d-small-none">
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
@@ -14,15 +14,15 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav ml-auto">
 		  <li class="nav-item active">
-		    <a class="nav-link" href="{{ site.baseurl }}/">Home <span class="sr-only">(current)</span></a>
+		    <a class="nav-link" href="{{ site.url }}/">Home <span class="sr-only">(current)</span></a>
 		  </li>
 		  {% for page in site.pages %} {% if page.title %}
 		  <li class="nav-item">
-		    <a class="nav-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+		    <a class="nav-link" href="{{ page.url | prepend: site.url }}">{{ page.title }}</a>
 		  </li>
 		  {% endif %} {% endfor %}
 		  <li class="nav-item">
-		    <a class="nav-link" href="{{ '/blog' | prepend: site.baseurl }}">Blog</a>
+		    <a class="nav-link" href="{{ '/blog' | prepend: site.url }}">Blog</a>
 		  </li>
 		</ul>
 	</div>
