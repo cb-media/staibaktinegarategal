@@ -10,6 +10,7 @@
 	
 	{% assign sorted = site.schedules | sort: 'date' | reverse %}
 	{% for s in sorted %}
+	{% if s.publish != false %}
 
 	<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 		<div class="card {{ s.status-class }} mb-3" style="max-width: 20rem;">
@@ -21,6 +22,7 @@
 		</div>
 	</div>
 
+	{% endif %}
 	{% endfor %}
 
 </div>

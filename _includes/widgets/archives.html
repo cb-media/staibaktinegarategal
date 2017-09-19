@@ -4,17 +4,16 @@
 		{% assign currentDate = post.date | date: "%Y" %}
 		{% if currentDate != myDate %}
 		{% unless forloop.first %}</ul>{% endunless %}
-		<a data-toggle="collapse" data-parent="#archives" href="#{{ currentDate }}" aria-expanded="true" aria-controls="{{ currentDate }}"><h5>{{ currentDate }}</h5></a>
-		<div id="{{ currentDate }}" class="collapse show" role="tabpanel">
+		<a data-toggle="collapse" data-parent="#archives" href="#{{ currentDate }}" aria-expanded="true" aria-controls="{{ currentDate }}"><h5><i class="fa fa-plus-square"></i> Archive {{ currentDate }}</h5></a>
+		<div id="{{ currentDate }}" class="collapse" role="tabpanel">
 			<p class="mb-3">
-				<ul class="list-unstyled">
+				<ul class="list-unstyled list-news">
 					{% assign myDate = currentDate %}
 					{% endif %}
 					<li>
 						<small class="text-muted"><i class="fa fa-calendar"></i>  {{ post.date | date_to_string }}</small> <br> 
 						<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 					</li>
-				</ul>
 			</p>
 			{% endfor %}
 		</div>

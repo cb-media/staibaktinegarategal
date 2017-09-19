@@ -25,6 +25,8 @@ permalink: /schedules/
 
 		{% assign sorted = site.schedules | sort: 'date' | reverse %}
 		{% for s in sorted %}
+		{% if s.publish != false %}
+
 		<div class="col-sm-6">
 			<div class="card {{ s.status-class }} mb-3">
 				<div class="card-header clearfix">
@@ -42,7 +44,8 @@ permalink: /schedules/
 				</div>
 			</div>
 		</div>
-
+		
+		{% endif %}
 		{% endfor %}
 	</div>
 

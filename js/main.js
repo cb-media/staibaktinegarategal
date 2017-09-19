@@ -1,5 +1,13 @@
+/**
+ * Silahkan di ubah untuk configurasi javascript
+ * sesuai dengan keinginan anda.
+ */
+
 $(document).ready (function () {
-    $(window).scroll (function () {
+	/**
+	 * Navigation Overlay on Scroll
+	 */
+	$(window).scroll (function () {
         var sT = $(this).scrollTop();
             if (sT >= 300) {
                 $('.navbar-no-scroll').addClass('navbar-scroll');

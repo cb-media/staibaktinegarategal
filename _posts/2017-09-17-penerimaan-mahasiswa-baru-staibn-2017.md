@@ -7,7 +7,7 @@ categories: [campus-news]
 # Author / Penulis
 author: dimasalfan
 # Tanggal Posting dengan format YYYY-MM-DD
-date: 2017-09-17
+date: 2017-09-17 18:51:14 +0700
 # meta description untuk posting
 meta: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, qui!
 # uri gambar kecil panjang x lebar harus sama alias persegi!
