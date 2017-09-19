@@ -23,7 +23,7 @@ author: Imam Ali Mustofa - CB Media Group Software & Application Developer
 description: >
   Portal Akademik Sekolah Tinggi Agama Islam Bakti Negara (STAIBN) Tegal 
 baseurl: "/staibaktinegarategal" # Sesuaikan dengan root / nama folder
-url: "http://news.staibaktinegarategal.ac.id" # Sesuaikan dengan nama url website
+url: "http://portal.staibaktinegarategal.ac.id" # Sesuaikan dengan nama url website
 twitter_username: yourtwitter
 github_username:  yourgithub
 
